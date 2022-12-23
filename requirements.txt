@@ -3,3 +3,4 @@ yfinance==0.1.70
 pandas==1.4.2
 pandas-datareader==0.10.0
 mplfinance==0.12.9b0
+nsetools==1.0.11
