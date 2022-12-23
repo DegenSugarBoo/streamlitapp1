@@ -779,7 +779,7 @@ with st.sidebar.form('settings_form'):
         'charles', 'checkers', 'classic', 'yahoo',
         'mike', 'nightclouds', 'sas', 'starsandstripes'
     ]
-    chart_style = st.selectbox('Chart style', options=chart_styles, index=chart_styles.index('yahoo'))
+    chart_style = st.selectbox('Chart style', options=chart_styles, index=chart_styles.index('mike'))
     chart_types = [
         'candle', 'ohlc', 'line', 'renko', 'pnf'
     ]
