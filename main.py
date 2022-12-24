@@ -1976,7 +1976,7 @@ def General_Market():
     df=pd.DataFrame(adv)
     df['total_assets']=df['advances']+df['declines']
     df['Fraction of assets with net +ve Returns']=(df.advances)/(df.total_assets)
-    df['pct_decline_assets']=1-df.pct_advance_assets
+    df['pct_decline_assets']=1-df['Fraction of assets with net +ve Returns']
     fig = plt.figure(figsize=(15, 7))
     plt.xticks(rotation=90)
     sns.barplot(data=df,x='indice',y='Fraction of assets with net +ve Returns')
