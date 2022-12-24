@@ -1975,11 +1975,11 @@ def General_Market():
     adv=nse.get_advances_declines()
     df=pd.DataFrame(adv)
     df['total_assets']=df['advances']+df['declines']
-    df['pct_advance_assets']=(df.advances)/(df.total_assets)
+    df['Fraction of assets with net +ve Returns']=(df.advances)/(df.total_assets)
     df['pct_decline_assets']=1-df.pct_advance_assets
     fig = plt.figure(figsize=(15, 7))
     plt.xticks(rotation=90)
-    sns.barplot(data=df,x='indice',y='pct_advance_assets')
+    sns.barplot(data=df,x='indice',y='Fraction of assets with net +ve Returns')
     #fig.set(xlabel='Indice', ylabel='Fraction of Assets Net Up for the Day')
     st.pyplot(fig)
 
