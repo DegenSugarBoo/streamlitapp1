@@ -1998,9 +1998,7 @@ def long():
         
     st.sidebar.subheader('Settings')
     st.sidebar.caption('Adjust charts settings and then press apply')
-    st.sidebar.markdown('---')
-    st.sidebar.write('Developed by Siddharth Kumar')
-    st.sidebar.write('Contact at mm21b061@smail.iitm.ac.in ')
+    
 
     with st.sidebar.form('settings_form'):
         show_nontrading_days = st.checkbox('Show non-trading days', True)
@@ -2021,7 +2019,9 @@ def long():
         mav3 = st.number_input('Moving Average 3', min_value=3, max_value=300, value=9, step=1)
 
         st.form_submit_button('Apply')
-     
+    st.sidebar.markdown('---')
+    st.sidebar.write('Developed by Siddharth Kumar')
+    st.sidebar.write('Contact at mm21b061@smail.iitm.ac.in ')
     fig, ax = mpf.plot(
             df,
             title=f'{ab} Chart',
