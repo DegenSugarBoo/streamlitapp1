@@ -1986,7 +1986,7 @@ def General_Market():
 def long():
     
     
-    dropdown=st.selectbox("Pick your Asset",all_market)
+    dropdown=st.selectbox("Pick your Asset from the dropdown menu below",all_market)
     ab=dropdown
     dropdown=dropdown+".NS"
 
@@ -2047,7 +2047,7 @@ def Indi():
     
 
 
-    dropdown=st.selectbox('Pick your desired asset',all_market)
+    dropdown=st.selectbox('Pick your desired asset from the dropdown menu below',all_market)
     ycode=dropdown+".NS"
     if len(dropdown)>0:
         df=pdr.get_data_yahoo(ycode,period='1d',interval='1m')
